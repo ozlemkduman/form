@@ -1,0 +1,28 @@
+*{
+    box-sizing: border-box;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+.formArea{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    justify-content: center;
+    border: 1px solid black;
+}
+.buttonSend{
+    margin-top: 20px;
+}
+.buttonSend a{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.buttonForm a{
+    text-decoration: none;
+    color: aliceblue;
+}
