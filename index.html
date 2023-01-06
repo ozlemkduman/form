@@ -19,16 +19,16 @@
       <br />
 
       <form class="formArea" action="">
-        <div class="divEmail ">
+        <div class="divEmail">
           <label for="emailf">E-mail</label><br />
           <input
             class="inputEmail"
-            type="text"
+            type="email"
             name="email"
             placeholder="example@example.com"
-            required
+            required="required"
           />
-          <p class="errorMessage"> </p>
+          <span></span>
         </div>
         <div class="divFullName">
           <label for="fName">Full Name</label><br />
@@ -37,39 +37,46 @@
             type="text"
             name="fullName"
             placeholder="Johnny Bravo"
+            minlength="6"
             required
           />
-          <p class="errorMessage"></p>
+          <span></span>
         </div>
         <div class="divPhoneNumber">
           <label for="phoneF">Phone Number</label><br />
           <input
             class="inputPhone"
-            type="text"
+            type="tel"
             name="phoneNumber"
+            pattern="[0-9]{10}"
             placeholder="5321234567"
+            required
           />
-          <p class="errorMessage"></p>
+          <span></span>
         </div>
         <div class="divPassword">
           <label for="passwordF">Password</label><br />
           <input
             class="inputPassword"
-            type="text"
+            type="password"
             name="password"
+            pattern="[0-9]{8}"
             placeholder="********"
+            required
           />
-          <p class="errorMessage"></p>
+          <span></span>
         </div>
         <div class="divPassword2">
           <label for="password2F">Password 2</label><br />
           <input
             class="inputPassword2"
-            type="text"
+            type="password"
             name="password2"
+            pattern="[0-9]{8}"
             placeholder="********"
+            required
           />
-          <p class="errorMessage"></p>
+          <span></span>
         </div>
         <div class="divAddress">
           <label for="fAddress">Address</label><br />
@@ -77,13 +84,18 @@
             class="textAreaAddress"
             name="address"
             placeholder="text"
+            required
           ></textarea>
-          <p class="errorMessage"></p>
         </div>
+        <button class="buttonSend btn btn-success" type="submit">
+          <a href="#">Gönder</a>
+        </button>
+        <button class="buttonSend btn btn-primary" type="reset">
+          Reset
+        </button>
       </form>
-      <button class="buttonSend btn btn-success" type="submit">
-        <a href="#">Gönder</a>
-      </button>
+      
+      
     </div>
     <script src="script.js"></script>
     <script

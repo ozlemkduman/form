@@ -18,57 +18,33 @@
   background-color: rgb(255, 255, 255);
   padding: 20px;
 }
-.error {
-  border: 1px solid red;
-  border-radius: 5px;
-  width: 280px;
-  margin-top: 10px;
-}
-.success{
+
+input:valid {
   border: 1px solid green;
   box-shadow: 1px 2px;
   border-radius: 5px;
   width: 280px;
-  margin-top: 10px;
-}
-.inputEmail {
-  width: 280px;
-  margin-top: 10px;
-  border: 1px solid #f0f0f0;
-  border-radius: 5px;
-}
-.inputFullName {
-  width: 280px;
-  margin-top: 10px;
-  border: 1px solid #f0f0f0;
-  border-radius: 5px;
-}
-.inputPhone {
-  width: 280px;
-  margin-top: 10px;
-  border: 1px solid #f0f0f0;
-  border-radius: 5px;
-}
-.inputPassword {
-  width: 280px;
-  margin-top: 10px;
-  border: 1px solid #f0f0f0;
-  border-radius: 5px;
-}
-.inputPassword2 {
-  width: 280px;
-  margin-top: 10px;
-  border: 1px solid #f0f0f0;
-  border-radius: 5px;
+  margin: 10px 0px;
 }
 
+input:valid + span::before {
+  content: "✔";
+  color: green;
+}
+
+input:invalid {
+  border: 1px solid red;
+  border-radius: 5px;
+  width: 280px;
+  margin-top: 10px;
+  margin: 10px 0px;
+}
 .formArea textarea {
   width: 280px;
   margin-top: 10px;
   border: 1px solid #f0f0f0;
   border-radius: 5px;
 }
-
 
 .buttonSend {
   margin-top: 20px;
