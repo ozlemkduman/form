@@ -18,84 +18,83 @@
       <h4>Form bilgilerini doldurunuz</h4>
       <br />
 
-      <form class="formArea" action="">
+      <form class="formMainArea" action="" >
         <div class="divEmail">
-          <label for="emailf">E-mail</label><br />
+          <label for="emailFor">E-mail</label><br />
           <input
+            id="emailFor"
             class="inputEmail"
             type="email"
             name="email"
             placeholder="example@example.com"
-            required="required"
+            
           />
           <span></span>
         </div>
         <div class="divFullName">
-          <label for="fName">Full Name</label><br />
+          <label for="fullnameFor">Full Name</label><br />
           <input
+            id="fullnameFor"
             class="inputFullName"
             type="text"
             name="fullName"
             placeholder="Johnny Bravo"
             minlength="6"
-            required
+            
           />
           <span></span>
         </div>
         <div class="divPhoneNumber">
-          <label for="phoneF">Phone Number</label><br />
+          <label for="phoneFor">Phone Number</label><br />
           <input
+          
+            id="phoneFor"
             class="inputPhone"
             type="tel"
             name="phoneNumber"
-            pattern="[0-9]{10}"
+            pattern="[0-9]{10,10}"
             placeholder="5321234567"
-            required
+            
           />
           <span></span>
         </div>
         <div class="divPassword">
-          <label for="passwordF">Password</label><br />
+          <label for="passwordFor">Password</label><br />
           <input
+            id="passwordFor"
             class="inputPassword"
             type="password"
             name="password"
-            pattern="[0-9]{8}"
             placeholder="********"
-            required
+            
           />
           <span></span>
         </div>
         <div class="divPassword2">
-          <label for="password2F">Password 2</label><br />
+          <label for="password2For">Password 2</label><br />
           <input
+            id="password2For"
             class="inputPassword2"
             type="password"
             name="password2"
-            pattern="[0-9]{8}"
             placeholder="********"
-            required
+            
           />
           <span></span>
         </div>
         <div class="divAddress">
-          <label for="fAddress">Address</label><br />
+          <label for="addressFor">Address</label><br />
           <textarea
+            id="addressFor"
             class="textAreaAddress"
             name="address"
             placeholder="text"
-            required
+            
           ></textarea>
         </div>
-        <button class="buttonSend btn btn-success" type="submit">
-          <a href="#">Gönder</a>
-        </button>
-        <button class="buttonSend btn btn-primary" type="reset">
-          Reset
-        </button>
+        <button class="buttonSend btn btn-success" type="submit">Gönder</button>
+        <button class="buttonSend btn btn-primary" type="reset">Reset</button>
       </form>
-      
-      
     </div>
     <script src="script.js"></script>
     <script
