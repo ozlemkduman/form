@@ -1,54 +1,24 @@
-const buttonSend = document.querySelector(".buttonSend");
-const buttonForm = document.querySelector(".buttonForm");
-const inputEmail = document.querySelector(".inputEmail");
-const inputFullName = document.querySelector(".inputFullName");
-const inputPhone = document.querySelector(".inputPhone");
-const inputPassword = document.querySelector(".inputPassword");
-const inputPassword2 = document.querySelector(".inputPassword2");
-const textAreaAddress = document.querySelector(".textAreaAddress");
+const inputEmail=document.querySelector(".inputEmail");
+const inputFullName=document.querySelector(".inputFullName");
+const inputPhone=document.querySelector(".inputPhone");
+const inputPassword=document.querySelector(".inputPassword");
+const inputPassword2=document.querySelector(".inputPassword2");
+const formMainArea=document.querySelector(".formMainArea");
 
-const formMainArea = document.querySelector(".formMainArea");
-const formUserArea = document.querySelector(".formUserArea");
+formMainArea.addEventListener("submit",function(){
+    console.log("kes");
+    saveLocal();
+})
 
-const userInfo = document.querySelector(".userInfo");
-
-formMainArea.addEventListener("submit", function (e) {
-
-    submit();
-});
-
-function inputName(input) {
-  let localName = input.name;
-  return localName;
+function inputName(input){
+    let name=input.name;
+    return name;
+}
+function inputValue(input){
+    let value=input.value;
+    return value;
 }
 
-let userInfoArray = [];
-
-//user objesi oluştur ve diziye ekle
-function submit() {
-  let userObject = {
-    eMail: inputEmail.value,
-    fullName: inputFullName.value,
-  };
-
-  userInfoArray.push(userObject);
-
-  createNewUser();
+function saveLocal(){
+    localStorage.setItem(inputName(inputEmail),JSON.stringify(inputValue(inputEmail)));
 }
-console.log(userInfo)
-//dizinin elemanı kadar yeni div oluştur
-function createNewUser() {
-  for (let user of userInfoArray) {
-    let getUser = createNewdiv("user.content");
-    userInfo.appendChild(getUser);
-  }
-}
-//yeni div oluştur ve yeni oluşan userleri buna ekle
-
-function createNewdiv(content) {
-  let newDiv = document.createElement("div");
-  userInfo.appendChild(newDiv);
-  newDiv.textContent = content;
-  return newDiv;
-}
-

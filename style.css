@@ -77,3 +77,8 @@ input:invalid {
   padding: 5px;
   background-color: beige;
 }
+
+.userInfo{
+  font-size: 20px;
+  margin-bottom: 30px;
+}

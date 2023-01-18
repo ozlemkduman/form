@@ -18,7 +18,7 @@
       <h4>Form bilgilerini doldurunuz</h4>
       <br />
 
-      <form class="formMainArea" action="" >
+      <form class="formMainArea" action="form.html" >
         <div class="divEmail">
           <label for="emailFor">E-mail</label><br />
           <input
@@ -27,7 +27,7 @@
             type="email"
             name="email"
             placeholder="example@example.com"
-            
+            required
           />
           <span></span>
         </div>
@@ -40,7 +40,7 @@
             name="fullName"
             placeholder="Johnny Bravo"
             minlength="6"
-            
+            required
           />
           <span></span>
         </div>
@@ -54,7 +54,7 @@
             name="phoneNumber"
             pattern="[0-9]{10,10}"
             placeholder="5321234567"
-            
+            required
           />
           <span></span>
         </div>
@@ -66,7 +66,7 @@
             type="password"
             name="password"
             placeholder="********"
-            
+            required
           />
           <span></span>
         </div>
@@ -78,7 +78,7 @@
             type="password"
             name="password2"
             placeholder="********"
-            
+            required
           />
           <span></span>
         </div>
@@ -89,7 +89,7 @@
             class="textAreaAddress"
             name="address"
             placeholder="text"
-            
+            required
           ></textarea>
         </div>
         <button class="buttonSend btn btn-success" type="submit">Gönder</button>
