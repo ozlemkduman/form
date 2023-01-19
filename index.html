@@ -18,7 +18,7 @@
       <h4>Form bilgilerini doldurunuz</h4>
       <br />
 
-      <form class="formMainArea" action="form.html" >
+      <form class="formMainArea" action="form.html">
         <div class="divEmail">
           <label for="emailFor">E-mail</label><br />
           <input
@@ -47,7 +47,6 @@
         <div class="divPhoneNumber">
           <label for="phoneFor">Phone Number</label><br />
           <input
-          
             id="phoneFor"
             class="inputPhone"
             type="tel"
@@ -84,13 +83,14 @@
         </div>
         <div class="divAddress">
           <label for="addressFor">Address</label><br />
-          <textarea
+          <input
             id="addressFor"
-            class="textAreaAddress"
+            class="textArea"
+            type="text"
             name="address"
             placeholder="text"
             required
-          ></textarea>
+          />
         </div>
         <button class="buttonSend btn btn-success" type="submit">Gönder</button>
         <button class="buttonSend btn btn-primary" type="reset">Reset</button>
