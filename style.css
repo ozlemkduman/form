@@ -59,14 +59,6 @@ input:invalid {
   color: white;
   font-weight: bold;
 }
-.buttonForm a {
-  text-decoration: none;
-  color: aliceblue;
-}
-.buttonForm a:hover {
-  color: white;
-  font-weight: bold;
-}
 
 /****   form style   ****/
 
