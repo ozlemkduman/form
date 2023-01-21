@@ -45,9 +45,11 @@ input:invalid {
   height: 100px;
 }
 
-.buttonSend {
+.buttonSend .buttonReset .buttonLoad {
   margin-top: 20px;
+  
 }
+
 
 .buttonSend a {
   text-decoration: none;
