@@ -58,44 +58,15 @@ function infoList() {
   liPassword2.textContent = `Şifre Doğrulama: ${keyLocal[4]}`;
   liAddress.textContent = `Adres: ${keyLocal[5]}`;
 }
-
-function loadButton() {
-  if (
-    localStorage.getItem(
-      "email",
-      "fullName",
-      "phoneNumber",
-      "password",
-      "password2",
-      "address"
-    ) != null
-  ) {
-    console.log("hey");
-    inputEmail.setAttribute("value", JSON.parse(localStorage.getItem("email")));
-    inputFullName.setAttribute(
-      "value",
-      JSON.parse(localStorage.getItem("fullName"))
-    );
-    inputPhone.setAttribute(
-      "value",
-      JSON.parse(localStorage.getItem("phoneNumber"))
-    );
-    inputPassword.setAttribute(
-      "value",
-      JSON.parse(localStorage.getItem("password"))
-    );
-    inputPassword2.setAttribute(
-      "value",
-      JSON.parse(localStorage.getItem("password2"))
-    );
-    textArea.setAttribute("value", JSON.parse(localStorage.getItem("address")));
-  }
-}
-
 buttonLoadSuccess.addEventListener("click",function(){
-  window.location.href="main.html";
 
+  window.location.href="main.html";
+  
 })
+
+
+
+
 
 
 

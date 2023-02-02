@@ -6,6 +6,7 @@ const inputPassword2 = document.querySelector(".inputPassword2");
 const inputTextArea = document.querySelector(".inputTextArea");
 const formMainArea = document.querySelector(".formMainArea");
 const buttonLoad = document.querySelector(".buttonLoad");
+const buttonReset= document.querySelector(".buttonReset");
 
 formMainArea.addEventListener("submit", function () {
   saveLocal();
@@ -20,6 +21,14 @@ function getInputValue(input) {
   let value = input.value;
   return value;
 }
+buttonReset.addEventListener("click", function(e){
+  inputEmail.setAttribute("value","");
+  inputFullName.setAttribute("value","");
+  inputPassword.setAttribute("value","");
+  inputPassword2.setAttribute("value","");
+  inputPhone.setAttribute("value","");
+  inputTextArea.setAttribute("value","");
+});
 
 function loadLocal() {
   const getLocalEmail = localStorage.getItem("email");
@@ -82,6 +91,8 @@ function loadButton() {
       JSON.parse(localStorage.getItem("password2"))
     );
     inputTextArea.setAttribute("value", JSON.parse(localStorage.getItem("address")));
+  }else {
+    console.log("local boş");
   }
 }
 
