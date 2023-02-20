@@ -58,15 +58,40 @@ function infoList() {
   liPassword2.textContent = `Şifre Doğrulama: ${keyLocal[4]}`;
   liAddress.textContent = `Adres: ${keyLocal[5]}`;
 }
-buttonLoadSuccess.addEventListener("click",function(){
-
-  window.location.href="main.html";
-  
-})
 
 
 
+buttonLoadSuccess.addEventListener("click", function () {
+  getParams();
+  console.log();
+});
 
+function getParams() {
+
+  // "?" ile url 2 ayrı değeri olan diziye  dönüşür. çünkü "?" işareti 1 tane vardır. queryString değişkeni bu dizinin 1 indisini değer alır. yani soru işaretinden sonraki kısmı.
+var queryString =document.URL.split("?")[1]; 
+
+//burada "&" karakteriyle kesilen değerlerden yeni dizi oluşturuyoruz.
+var params = queryString.split("&");
+
+// obje oluşturma
+var paramValues = {};
+
+for (var i = 0; i < params.length; i++) { //paramsın uzunluğu esas alınır 
+  var keyValue = params[i].split("="); //burada her değer "=" işareti ile kesilen yeni diziler oluşur
+  var key = decodeURIComponent(keyValue[0]); // keyValue'nun 1. elemanı yani 0 indisi key sayılır.
+  var value = decodeURIComponent(keyValue[1]); // keyValue'nun 2. elemanı yani 1 indisi key sayılır.
+  paramValues[key] = value; // paramValues objesinde "key" isimli key in valuesu buradaki value olarak atanır
+}
+
+// Output the resulting object with parameter values
+console.log(paramValues);
+console.log(queryString);
+console.log(params);
+console.log(keyValue);
+console.log(paramValues);
+
+}
 
 
 
